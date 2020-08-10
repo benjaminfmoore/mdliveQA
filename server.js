@@ -12,7 +12,9 @@ const port = process.env.PORT || 8080
 
 
 
-
+//************** */
+// GET THE APPS!
+//*********** */
 
 app.get("/apps", paginatedResults(Apps), (req, res) => {
   res.json(res.paginatedResults);
