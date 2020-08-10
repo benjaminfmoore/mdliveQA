@@ -9,8 +9,12 @@ require('./mongoose')
 const port = process.env.PORT || 8080
 
 
-
-
+//************* */
+//START
+//************ */
+app.get('/', (req, res) => {
+  res.send('Welcome to the MDLIVE QA test please input parameters')
+})
 
 //************** */
 // GET THE APPS!
