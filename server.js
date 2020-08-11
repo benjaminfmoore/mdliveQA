@@ -13,7 +13,7 @@ const port = process.env.PORT || 8080
 //START
 //************ */
 app.get('/', (req, res) => {
-  res.send('Welcome to the MDLIVE QA test please input parameters')
+  res.send('Welcome to the MDLIVE QA test please input parameters. For example you can search your params such as "/apps?page=<pagenumber>&limit=<limitnumber>&sort<id or name>" I have 10 apps in here with varying ID#s that were automatically assigned by MongoDB')
 })
 
 //************** */

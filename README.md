@@ -1,68 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MDLIVE QA code challenge. 
 
-## Available Scripts
+Hello, 
+My name is Benjamin Moore IV and this is my submission for the MDLIVE QA challenge. The purpose of this challenge was to test our ability to paginate over an array of JSON objects and be able to sort them and view them. I made an array of 10 JSON objects, all of which had an ID number that was given via an automatic Mongoose Schema along with an app name ("my-app-001"). 
 
-In the project directory, you can run:
+My task was to build a way to allow pagination over the objects. I attempted this task using a combination of Mongoose, Express and JavaScript. Using Mongoose, I created a schema and seeded 10 app objects into a database I saved on the MongoDB cloud. After I saved the objects, I created a server.js file where I connected my Mongo database to the server. I then created a base route ("/") that would act as a "Splash Page" due to the fact that I didn't do any front-end work on here. 
 
-### `yarn start`
+With setting up the paginations  I created a function to act as a model for future use. I had to do some research on how to set it up but once I did get the function set up, I was able to use a very minimal get request for the apps route. This model also allows for easy expansion to other GET requests as needed. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The hardest part for the model was trying to make it sort by either the name or the ID. After asking around for help from my mentors and colleagues I devised a way to make the sort aspect be its own variable. By setting it as a variable I was able to put in words to match such as "name" becoming the sort functionality of making the file sort by name but still being able to refresh and put in the ability to make it sort by ID. By making this set of functions its own variables, I would be able to make the code not only sort by name and ID, but also make it sort by ascending or descending name and ID as well with some extra lines of code. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Due to the difficulty with the code and the unfamiliarity of pagination (I had built several databases and worked with pulling data from servers and also from other APIS but had never implemented my own pagination code into my own servers and databases) I was unable to complete the stretch goals of making it run automatic testing. 
 
-### `yarn test`
+Overall I am very satisfied with my work and hope this coding challenge is a great way to showcase my talents. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The code is deployed to https://sleepy-crag-14052.herokuapp.com/ 
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+At the splash page you can start inputing your parameters in the style of "/apps?page=<pagenumber>&limit=<limitnumber>&sort<id or name>" (All characters inside of "<>" are the variables you can fill in). 
